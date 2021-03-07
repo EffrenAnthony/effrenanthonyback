@@ -43,7 +43,7 @@ router.post('/api/contact', async (req, res) => {
         
         
         const info = await transporter.sendMail({
-            from: `<${email}>`,
+            from: `<${usuario}>`,
             to: 'effrenanthony2704@gmail.com',
             subject: subject,
             html: contentHTML

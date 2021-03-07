@@ -6,8 +6,8 @@ var cors = require('cors');
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-var allowedOrigins = ['http://localhost:3000',
-                      'https://effrenanthony.vercel.app'];
+// var allowedOrigins = ['http://localhost:3000',
+//                       'https://effrenanthony.vercel.app'];
 // app.use(cors({
 //   origin: function(origin, callback){
 //     // allow requests with no origin 
@@ -21,9 +21,10 @@ var allowedOrigins = ['http://localhost:3000',
 //     return callback(null, true);
 //   }
 // }));
-app.use(cors({
-  origin: 'http://localhost:3000'
-}));
+// app.use(cors({
+//   origin: 'http://localhost:3000'
+// }));
+app.use(cors())
 app.use(require('./app/routes/contact.js'))
 
 const port = process.env.PORT || 3001;
